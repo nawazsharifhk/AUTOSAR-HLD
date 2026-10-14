@@ -12,6 +12,7 @@ import requests
 import pandas as pd
 from frontend.styles import apply_fluent_styles
 from frontend.components.ui_components import render_hero_banner, render_metric_card, get_asil_badge, get_status_chip
+from frontend.api_client import get_api_url, ensure_backend_alive
 
 st.set_page_config(
     page_title="AutoHLD-AI | Engineering Intelligence",
@@ -22,7 +23,7 @@ st.set_page_config(
 
 apply_fluent_styles()
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = ensure_backend_alive()
 
 
 def fetch_api(endpoint: str):
@@ -51,6 +52,16 @@ with st.sidebar:
         st.success("● Backend REST API Online")
     else:
         st.warning("○ Backend Connecting (Local Fallback Ready)")
+
+    if st.button("🧪 Seed Benchmark HLDs", help="Load pre-configured AUTOSAR Brake & ADAS documents into the workspace", use_container_width=True):
+        try:
+            with st.spinner("Seeding benchmark documents..."):
+                from scripts.seed_sample_data import seed_database
+                seed_database()
+            st.success("Benchmark HLDs seeded!")
+            st.rerun()
+        except Exception as e:
+            st.error(f"Seeding failed: {e}")
 
     st.divider()
     st.caption("AutoHLD-AI v1.0.0 • DeepMind Automotive AI")

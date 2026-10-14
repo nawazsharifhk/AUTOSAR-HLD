@@ -21,6 +21,8 @@ from backend.services.ml_analytics_service import (
     get_total_score
 )
 
+from frontend.api_client import get_api_url, ensure_backend_alive
+
 st.set_page_config(
     page_title="AutoHLD-AI | AI/ML Metrics & Evaluation",
     page_icon="🤖",
@@ -29,7 +31,7 @@ st.set_page_config(
 
 apply_fluent_styles()
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = ensure_backend_alive()
 
 # Header
 render_hero_banner(

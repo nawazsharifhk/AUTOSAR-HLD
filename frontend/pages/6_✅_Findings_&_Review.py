@@ -11,11 +11,12 @@ import streamlit as st
 import requests
 from frontend.styles import apply_fluent_styles
 from frontend.components.ui_components import render_hero_banner, get_status_chip
+from frontend.api_client import get_api_url, ensure_backend_alive
 
 st.set_page_config(page_title="Findings & Review | AutoHLD-AI", page_icon="✅", layout="wide")
 apply_fluent_styles()
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = ensure_backend_alive()
 
 render_hero_banner(
     title="Human-in-the-Loop Architecture Review",

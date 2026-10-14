@@ -4,10 +4,14 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 try:
-    import fitz  # PyMuPDF
+    import pymupdf as fitz
     PYMUPDF_AVAILABLE = True
 except ImportError:
-    PYMUPDF_AVAILABLE = False
+    try:
+        import fitz
+        PYMUPDF_AVAILABLE = True
+    except ImportError:
+        PYMUPDF_AVAILABLE = False
 
 try:
     import pdfplumber

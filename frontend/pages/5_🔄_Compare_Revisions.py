@@ -12,13 +12,14 @@ import requests
 import pandas as pd
 from frontend.styles import apply_fluent_styles
 from frontend.components.ui_components import render_hero_banner, render_metric_card, get_asil_badge
+from frontend.api_client import get_api_url, ensure_backend_alive
 
 st.set_page_config(page_title="Compare Revisions | AutoHLD-AI", page_icon="🔄", layout="wide")
 
 # Apply modern aesthetic UI styles
 apply_fluent_styles()
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = ensure_backend_alive()
 
 render_hero_banner(
     title="HLD Revision Comparison Engine",
