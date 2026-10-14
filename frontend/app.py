@@ -68,8 +68,14 @@ findings = fetch_api("/api/analysis/findings") or []
 
 total_docs = len(docs)
 total_pages = sum(d.get("page_count", 0) for d in docs)
-pending_findings = len([f for f in findings if "Review" in f.get("status", "")])
-accepted_findings = len([f for f in findings if "Accepted" in f.get("status", "")])
+pending_findings = len([
+    f for f in findings
+    if "Review" in f.get("status", "")
+])
+accepted_findings = len([
+    f for f in findings
+    if "Accepted" in f.get("status", "")
+])
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
