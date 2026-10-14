@@ -1,0 +1,7 @@
+INFO:     Will watch for changes in these directories: ['C:\\Users\\nawaz\\OneDrive\\Desktop\\AutoHLD-AI(Techpulse)']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [13728] using WatchFilesIINFO:     Started server process [24228]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+rning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  42%|####2     | 84/199 [00:00<00:00, 813.08it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 1101.79it/s]

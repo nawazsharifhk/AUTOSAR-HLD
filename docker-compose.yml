@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  autohld-backend:
+    build: .
+    container_name: autohld_backend
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/autohld.db
+      - CHROMA_PERSIST_DIR=./data/chroma
+      - EMBEDDING_MODEL=BAAI/bge-small-en-v1.5
+    env_file:
+      - .env
+
+  autohld-frontend:
+    build: .
+    container_name: autohld_frontend
+    command: streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    depends_on:
+      - autohld-backend
+    environment:
+      - BACKEND_HOST=autohld-backend
+      - BACKEND_PORT=8000
+    volumes:
+      - ./data:/app/data

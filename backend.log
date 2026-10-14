@@ -1,0 +1,43 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+INFO:     127.0.0.1:49277 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49278 - "GET /api/analysis/document/10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57339 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63693 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60216 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60217 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60218 - "GET /api/analysis/findings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54884 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61561 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62820 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64265 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64266 - "GET /api/analysis/findings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63736 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63738 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63739 - "GET /api/analysis/findings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50271 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50272 - "GET /api/analysis/document/10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62399 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57141 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57142 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53807 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54601 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54602 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54603 - "GET /api/analysis/findings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54586 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63480 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63481 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49685 - "POST /api/documents/upload HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:50490 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "POST /api/query HTTP/1.1" 200 OK
+LLM extraction note: '\n  "components"'
+INFO:     127.0.0.1:57727 - "POST /api/documents/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50942 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50943 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64003 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53116 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53118 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53119 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58440 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58441 - "POST /api/query HTTP/1.1" 200 OK
